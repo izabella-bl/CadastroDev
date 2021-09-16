@@ -11,19 +11,14 @@ public class CadastroDev {
         boolean invalido = true;
         String NomeDev = "" , sobrenomeDev = "", Senioridade = "", NomePrograma ="", DescricaoLing = "";
 
-
-
-
         while (continuacao){
             System.out.println("Menu: \n1-Cadastro dev\n2-Cadastro linguagem\n3-Sair");
             System.out.print("\nDigite:");
             int opcao = sc.nextInt();
 
-
             switch (opcao){
                 case 1:
                     sc.nextLine();
-
 
                     do {
                         System.out.println("Digite o nome do desenvolvedor:");
@@ -116,8 +111,10 @@ public class CadastroDev {
                      }while (invalido);
 
                      do{
-                         System.out.println("Quais dessas( Frontend, Backend ou Mobile) é aplicação do programa?");
+                         System.out.println("Quais dessas (Frontend, Backend ou Mobile) é aplicação do programa?");
                          String aplicacao = sc.nextLine();
+
+                         aplicacao = aplicacao.substring(0,1).toUpperCase() + aplicacao.substring(1);
 
                          if(aplicacao.equals("Frontend") || aplicacao.equals("Backend") || aplicacao.equals("Mobile")){
                              invalido=false;
