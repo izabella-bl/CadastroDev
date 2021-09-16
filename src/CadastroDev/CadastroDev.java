@@ -67,8 +67,8 @@ public class CadastroDev {
                     do {
                         System.out.println("Digite a idade do desenvolvedor:");
                         int idade = sc.nextInt();
-                        if (idade <= 10){
-                            System.out.println("Error:Idade deve que ser maior que dez anos!");
+                        if (idade <  8){
+                            System.out.println("Error:Idade deve que ser maior que oito anos!");
                             invalido = true;
                         }
                         else{
